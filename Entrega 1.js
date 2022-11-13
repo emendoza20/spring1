@@ -53,7 +53,10 @@ function contar(){
             func();
       }); // outputs  1, then 2
 
-//declaracion de funcion anonima con arrow function
+//Exercici 2 
+//Crea una funció anònima autoinvocable igualada a una variable que mostri per consola el nom de l'usuari/ària a rebut com a paràmetre.
+
+
 var mostrar_nombre = (nombre) => {
     console.log(nombre);
 } 
