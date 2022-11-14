@@ -35,6 +35,9 @@ async function sumaTresValores(a,b,c) {
   }
  
   //Async();
-  //console.log(doble(50))
+console.log(doble(1.6))
 
-  sumaTresValores(5,5,5)
+
+//captura de errores (no se pueden pasar letras como parametros)
+  //sumaTresValores(a,5,5)
+ // console.log(doble(1.6))
