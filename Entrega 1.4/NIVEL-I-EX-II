@@ -11,7 +11,7 @@ Crea una nova funció asíncrona que cridi a una altra que retorni una Promise q
 
         },2000);
        
-      } else {
+      }else{
         reject("no son iguales");
       }
     });

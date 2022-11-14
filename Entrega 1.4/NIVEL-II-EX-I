@@ -1,3 +1,6 @@
+//Crea una funció que retorni el doble del número que li passa com a paràmetre després de 2 segons.
+
+//Crea una altra funció que rebi tres números i calculi la suma dels seus dobles fent servir la funció anterior.
 /*function resolveAfter2Seconds() {
     return new Promise(resolve => {
       setTimeout(() => {
@@ -14,20 +17,24 @@
   }
   
   asyncCall();*/
+ 
   
-let double = (a) => a * 2;
+let doble = (a) => a * 2;
     setTimeout(function () {
-        console.log( double(10) );
+        return doble(10)
     },2000);
 
-async function Async() {
+async function sumaTresValores(a,b,c) {
     try {
      console.log('calling');
-      let message = await double();
-      console.log(message);
+      let suma = await doble(a) + doble(b) + doble(c);
+      console.log(suma);
     } catch (error) {
       console.log("Error: " + error);
     }
   }
  
-  Async();
+  //Async();
+  //console.log(doble(50))
+
+  sumaTresValores(5,5,5)
