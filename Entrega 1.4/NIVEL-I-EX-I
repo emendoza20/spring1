@@ -12,7 +12,7 @@ Crea una funció asíncrona que rebi un id d'empleat/da i imprimeixi per pantall
 **/
 
 
-  let employees = [{
+let employees = [{
     id: 1,
     name: 'Linux Torvalds'
 }, {
