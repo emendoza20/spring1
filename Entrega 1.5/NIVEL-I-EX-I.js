@@ -4,7 +4,7 @@
 Crea una funció que, en executar-la, escrigui una frase en un fitxer.*/
   var fs= require('fs');
 
-fs.writeFile('fitxer.txt', 'Hola soy elita', (error)=>{
+fs.writeFile('fitxer.txt', 'Hola soy elita mucho gusto!', (error)=>{
     if(error){
         console.log(`Error:`)
     }
