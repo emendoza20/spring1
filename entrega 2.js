@@ -1,10 +1,14 @@
-/*Nivell 2
+/*Nivell 1
 - Exercici 1
-Crea una arrow function que, rebent un paràmetre, retorni un objecte amb un atribut que tingui com a valor el paràmetre rebut.*/
+Mostra per la consola el resultat d'una arrow function autoinvocable que sumi dos nombres. =>CORREGIDO*/
 
-( (nombre,nombre2) => {
+/*( (nombre,nombre2) => {
     console.log(nombre+nombre2);
-  } )  ("María","Jose");
+  } )  ("María","Jose");*/ /*ejercicio erroneo*/
+
+let suma=(number1,number2) => number1 + number2;//RETORNA la suma de dos numeros en el arrow fuction y el resultado lo muestra por consola .anteriormente no retornaba nada 
+
+  console.log(suma(5,3));
 
   /*Nivell 2
 - Exercici 1
