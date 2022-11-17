@@ -23,7 +23,7 @@ console.log(persona("Marta", "Perez","27","Nueva Zelanda"));
   /**- Exercici 2 Nivel 2
 Crea una classe "Persona" que rebi un paràmetre 'nom' en ser instanciada. La classe inclourà un mètode dirNom que imprimeixi per consola el paràmetre 'nom'. Invoca el mètode dirNom des de fora de la classe. ***/
 
-function Persona() {
+/*function Persona() {
     this.name = 'Jack',
     this.age = 25,
     this.sayName = function () {
@@ -38,7 +38,7 @@ function Persona() {
 }
 
 const x = new Persona();
-x.sayName();
+x.sayName();*//**Ejercicio erroneo*/
 
 /**function Person(name) {
     this.name = name;
@@ -47,6 +47,28 @@ x.sayName();
     return this.name;
   }*/
 
+/***************EJERCICIO CORREGIDO NIVEL 2 EJERCICIO 2 CREAR CLASE**********************************
+
+
+/**- Exercici 2 Nivel 2
+Crea una classe "Persona" que rebi un paràmetre 'nom' en ser instanciada. La classe inclourà un mètode dirNom que imprimeixi per consola el paràmetre 'nom'. Invoca el mètode dirNom des de fora de la classe. ***/
+
+class Persona{
+    constructor(nom){
+    this.name=nom;
+}
+    
+   /* this.sayName = function () {
+ }*/
+         
+     dirNom = () => {
+            console.log(this.name);
+        }
+}
+const Joaquin= new Persona("Joaquin Phoenix");
+Joaquin.dirNom(); /*Invocar metodo dirNom instaciado desde la clase
+ 
+ 
   /*Nivell 3
 - Exercici 1
 Escriu una function creadora d'objectes que faci instàncies d'una classe abstracta. Invoca-la amb diferents definicions.*/
