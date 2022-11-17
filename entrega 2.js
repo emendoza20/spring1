@@ -73,7 +73,7 @@ Joaquin.dirNom(); /*Invocar metodo dirNom instaciado desde la clase
 - Exercici 1
 Escriu una function creadora d'objectes que faci instàncies d'una classe abstracta. Invoca-la amb diferents definicions.*/
 
-class Rectangulo {
+/*class Rectangulo {
     constructor (alto, ancho) {
       this.alto = alto;
       this.ancho = ancho;
@@ -90,4 +90,4 @@ class Rectangulo {
   
   const cuadrado = new Rectangulo(10, 10);
   
-  console.log(cuadrado.area); // 100 nuevo
+  console.log(cuadrado.area)**/; // 100 nuevo  //***EJERCICIO ERRONEO****/
