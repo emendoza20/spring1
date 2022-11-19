@@ -1,27 +1,29 @@
 /*Nivell 1
 - - Exercici 1
 Crea una funció que retorni una Promise que invoqui la funció resolve() o reject() que rep. Invoca-la passant-li les dues funcions de manera que imprimeixin un missatge diferent depenent de si la Promise es resol o no.*/
-const promise = new Promise((resolve, reject) => {
-	const number = Math.floor(Math.random() * 10);
 
-	setTimeout(() => number > 5 ? resolve(number) : reject(new Error('Menor a 5')),1000);
-});
+/EJERCICIO 1 NIVEL 1 corregido!!/
+function NumeroPar(Numero) { 
+    const PromesaPar = new Promise((resolve, reject) => {
+    
+        if (Numero%2==0) {
+            resolve(`el numero es par`);
+        } else {
+            reject(`el numero no es par es impar`);
+        }
+    });
+    return PromesaPar
+}
+//Invoca-la passant-li les dues funcions de manera que imprimeixin un missatge diferent depenent de si la Promise es resol o no.
 
-promise
-	.then(number => console.log(number))
-	.catch(error => console.error(error));
+NumeroPar(9).then(  
+  function(error) {console.log(error);},
+  function(value) {console.log(value);}
+);
 
-/**Crea una arrow function que rebi un paràmetre i una funció callback i li passi a la funció un missatge o un altre (que s'imprimirà per consola) en funció del paràmetre rebut. */
- /*setTimeout(function() {
-    console.log("He ejecutado la función");
-  }, 2000);
-  setTimeout(() => console.log("He ejecutado la función"), 2000);*/
-
-
-  /*setTimeout(() => { 
-    console.log("Este mensaje se muestra después de 3 segundos");
-}, 3000);*/
-/*let x = (x, y) => x * y;*/
+/**********************/
+/*- Exercici 2
+Crea una arrow function que rebi un paràmetre i una funció callback i li passi a la funció un missatge o un altre (que s'imprimirà per consola) en funció del paràmetre rebut.**/
 const DoSomething = (message,callback) => {
 
     //message='OK';
