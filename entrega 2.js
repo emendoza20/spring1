@@ -91,3 +91,42 @@ Escriu una function creadora d'objectes que faci instàncies d'una classe abstra
   const cuadrado = new Rectangulo(10, 10);
   
   console.log(cuadrado.area)**/; // 100 nuevo  //***EJERCICIO ERRONEO****/
+
+/**EJERCICIO CORREGIDO NIVEL 3 EJERCICIO 1
+Nivell 3
+- Exercici 1
+Escriu una function creadora d'objectes que faci instàncies d'una classe abstracta. Invoca-la amb diferents definicions.*//
+
+/*Nivell 2
+- Exercici 1
+ */
+class Fruit {
+  constructor() {
+    if (this.constructor === Fruit) {
+      throw new Error('Class "Fruit" cannot be instantiated')
+    }
+    this.color = 'unknown'
+  }
+
+  someMethod() {
+    throw new Error('Method "someMethod()" must be implemented.')
+  }
+}
+
+//const fruit = new Fruit() <-- ERROR
+
+/**
+ * Concrete  Class Fruit.
+ */
+class Orange extends Fruit {
+  constructor() {
+    super()
+    this.color = 'orange'
+  }
+  someMethod() {
+    console.log('Hello someMethod():', this.color)
+  }
+}
+
+const orange = new Orange()
+orange.someMethod()
