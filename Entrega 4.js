@@ -73,19 +73,11 @@ FuncionAsyncrona(1);
  /**- Exercici 2
 Crea una nova funció asíncrona que cridi a una altra que retorni una Promise que efectuï la seva funció resolve() després de 2 segons de la seva invocació. */
  
-const SoyunaPromesa= function () {
+const SoyunaPromesa= function () {/*corregida elimine la comparacion de las dos cadenas que en realidad no aportaba nada*/
     const promise = new Promise(function (resolve, reject) {
-      const x = "Hola";
-      const y = "Hola";
-      if (x === y) {
         setTimeout(function () {
-            resolve("son las mismas cadenas");
-
+            resolve("Hola me ejecuto despues de 2 segundos!");
         },2000);
-       
-      }else{
-        reject("no son iguales");
-      }
     });
  
     return promise;
@@ -120,10 +112,11 @@ function uno() {
 
 uno();
 console.log("Fin");*/
-
+//NIVEL 2 EJERCICIO 1
  //Crea una funció que retorni el doble del número que li passa com a paràmetre després de 2 segons.
 
 //Crea una altra funció que rebi tres números i calculi la suma dels seus dobles fent servir la funció anterior.
+//1)Crea una funció que retorni el doble del número que li passa com a paràmetre després de 2 segons.
 let doble = (a) => a * 2;
     setTimeout(function () {
         return doble(10)
