@@ -19,10 +19,18 @@
   asyncCall();*/
  
   
-let doble = (a) => a * 2;
-    setTimeout(function () {
-        return doble(10)
-    },2000);
+let doble = async(a) => {
+     
+
+    return new Promise((resolve, reject) => {
+      if(a>0){
+        setTimeout(() => resolve(a * 2), 2000)
+      }else{
+        reject(Error('ERORR'))
+
+      }
+    })
+}
 
 async function sumaTresValores(a,b,c) {
     try {
@@ -35,7 +43,7 @@ async function sumaTresValores(a,b,c) {
   }
  
   //Async();
-console.log(doble(1.6))
+console.log(doble(6))
 
 
 //captura de errores (no se pueden pasar letras como parametros)
