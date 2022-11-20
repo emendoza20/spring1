@@ -20,18 +20,35 @@ let salaries = [{
     salary: 2000
 }];
 
-getSalary = (id) => {
+getSalary = (empleado) => {
+   // id = empleado.id;
+    //console.log("EL empleado es :",empleado.id); 
     let promesa_salario = new Promise((resolve, reject) => {
-       if(salaries.find(x => x.id === id)){
-            console.log(`El salario es de USD ${salaries[id-1].salary}`)
-            resolve(salaries[id-1].salary)
-       }else
-       {
+        salaries.forEach(element=> {
+            if(element.id ==empleado.id){
+                resolve(element.salary)
+            }
+        });
             reject(`El salario no ha sido encontrado`);
-       }    
-        
     });
     return promesa_salario;
+ 
 }
 
-console.log(getSalary(3));
+getEmployee = (id) => {
+    let promesa = new Promise((resolve, reject) => {
+        employees.forEach(element => {
+            if(element.id == id){
+                resolve(element)
+            }   
+        });   
+        reject(`Empleado no encontrado`);
+    });
+    return promesa;
+
+
+}
+getEmployee(1)
+.then(result => getSalary(result))
+.then(result => console.log(result))
+.catch(error => console.log(error))

@@ -51,7 +51,5 @@ getSalary = (id) => {
 }
 
 
-getEmployee(3)
-.then(result => getSalary(result))
-.then(result => console.log())
-.catch(error => console.log(error))
+// Nivel 3 - Ejercicio 1
+getEmployee(5).catch((err) => console.log('empleado no encontrado', err.message))
