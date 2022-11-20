@@ -1,71 +1,75 @@
 /**Nivell 1
 - Exercici 1
 Crea una funció asíncrona que rebi un id d'empleat/da i imprimeixi per pantalla el nom de l'empleat/da i el seu salari, usant les funcions getEmployee() i getSalary() que has definit a la tasca anterior. */
+/**Nivell 1
+- Exercici 1
+Crea una funció asíncrona que rebi un id d'empleat/da i imprimeixi per pantalla el nom de l'empleat/da i el seu salari, usant les funcions getEmployee() i getSalary() que has definit a la tasca anterior. */
+
+
 let employees = [{
-    id: 1,
-    name: 'Linux Torvalds'
+  id: 1,
+  name: 'Linux Torvalds'
 }, {
-    id: 2,
-    name: 'Bill Gates'
+  id: 2,
+  name: 'Bill Gates'
 },{
-    id: 3,
-    name: 'Jeff Bezos'
+  id: 3,
+  name: 'Jeff Bezos'
 }];
- 
+
 let salaries = [{
-    id: 1,
-    salary: 4000
+  id: 1,
+  salary: 4000
 }, {
-    id: 2,
-    salary: 1000
+  id: 2,
+  salary: 1000
 },
 {
-    id: 3,
-    salary: 2000
+  id: 3,
+  salary: 2000
 } 
 
 ];
 
+getSalary = (empleado) => {
+  // id = empleado.id;
+   //console.log("EL empleado es :",empleado.id); 
+   let promesa_salario = new Promise((resolve, reject) => {
+       salaries.forEach(element=> {
+           if(element.id ==empleado.id){
+               resolve(element.salary)
+           }
+       });
+           reject(`El salario no ha sido encontrado`);
+   });
+   return promesa_salario;
+
+}
+
 getEmployee = (id) => {
-    let promesa = new Promise((resolve, reject) => {
-       if(employees.find(x => x.id === id)){
-            console.log(`El empleado es ${employees[id-1].name}`)
-            resolve(employees[id-1].id)
-       }else
-       {
-            reject(`Empleado no encontrado`);
-       }    
-        
-    });
-    return promesa;
-}
-getSalary = (id) => {
-    let promesa_salario = new Promise((resolve, reject) => {
-       if(salaries.find(x => x.id === id)){
-            console.log(`El salario es de USD ${salaries[id-1].salary}`)
-            resolve(salaries[id-1].salary)
-       }else
-       {
-            reject(`El salario no ha sido encontrado`);
-       }    
-        
-    });
-    return promesa_salario;
-}
- 
+   let promesa = new Promise((resolve, reject) => {
+       employees.forEach(element => {
+           if(element.id == id){
+               resolve(element)
+           }   
+       });   
+       reject(`Empleado no encontrado`);
+   });
+   return promesa;
 
-  async function obtenerDatos(id) {
-    
-      let message = await getEmployee(id)
-      .then(result => getSalary(result))
-      .then(result => console.log())
-      .catch(error => console.log(error))
-  
-   
-  }
- 
-  obtenerDatos(3);
+}
 
+const FuncionAsyncrona = async (id) => {/*corregido*/
+  try {
+  const promise1 = await getEmployee(id);
+  const promise2 = await getSalary(promise1);
+  console.log(promise1.name)
+  console.log(promise2)
+      }
+  catch(err) {console.log(err)}
+}
+
+FuncionAsyncrona(1);
  /**- Exercici 2
 Crea una nova funció asíncrona que cridi a una altra que retorni una Promise que efectuï la seva funció resolve() després de 2 segons de la seva invocació. */
  

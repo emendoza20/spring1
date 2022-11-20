@@ -1,52 +1,20 @@
 /**- Exercici 2
 Crea una nova funció asíncrona que cridi a una altra que retorni una Promise que efectuï la seva funció resolve() després de 2 segons de la seva invocació. */
  
-   const SoyunaPromesa= function () {
-    const promise = new Promise(function (resolve, reject) {
-      const x = "Hola";
-      const y = "Hola";
-      if (x === y) {
-        setTimeout(function () {
-            resolve("son las mismas cadenas");
+const fPromise = () => {
+  return new Promise((resolve, reject) => {
+      setTimeout(() => {resolve("Vamoss");}, 2000)
+  }) 
+}
 
-        },2000);
-       
-      }else{
-        reject("no son iguales");
-      }
-    });
- 
-    return promise;
-  };
- 
-  async function Asyncronica() {
-    try {
-      let message = await SoyunaPromesa();
-      console.log(message);
-    } catch (error) {
-      console.log("Error: " + error);
+const fAsincrona = async () => {
+  try {
+      const result = await fPromise();
+      console.log(result)
     }
-  }
- 
-  Asyncronica();
-
-  /*console.log("Inicio");
-
-function dos() {
-  setTimeout(function () {
-    console.log("Dos");
-  }, 3000);
+    catch(err) {
+      console.log(err.message)
+    } 
 }
 
-function uno() {
-  setTimeout(function () {
-    console.log("Uno");
-  }, 0);
-  dos();
-  console.log("Tres");
-}
-
-uno();
-console.log("Fin");*/
-
- 
+//fAsincrona();
