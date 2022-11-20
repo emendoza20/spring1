@@ -24,11 +24,11 @@ NumeroPar(9).then(
 /**********************/
 /*- Exercici 2
 Crea una arrow function que rebi un paràmetre i una funció callback i li passi a la funció un missatge o un altre (que s'imprimirà per consola) en funció del paràmetre rebut.**/
-const DoSomething = (message,callback) => {
+/*const DoSomething = (message,callback) => {/* ejercicios erroneo*/
 
     //message='OK';
 
-    if(message =='OK' ){
+  /*  if(message =='OK' ){
 	    callback();
     }else{
       console.log("mensaje no es OK")
@@ -41,8 +41,14 @@ var funcion_callback = () => {
   console.log("Mensaje de la funcion callbacks");
 }
 
-DoSomething("OKS",funcion_callback);
+DoSomething("OKS",funcion_callback);*/
 
+/**ejercicio corregido**//
+const fetchItems = (callback, ...params) => {
+  callback(params);
+}
+  
+fetchItems (console.log, 'foo', 1);
 
 /**Nivell 2
 - Exercici 1
