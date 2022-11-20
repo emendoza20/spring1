@@ -44,11 +44,11 @@ var funcion_callback = () => {
 DoSomething("OKS",funcion_callback);*/
 
 /**ejercicio corregido**//
-const fetchItems = (callback, ...params) => {
-  callback(params);
+const MyFuncion = (callback, message) => {
+  callback(message);
 }
   
-fetchItems (console.log, 'foo', 1);
+MyFuncion (console.log, 'Hola soy un parametro que va a llamar al callback');
 
 /**Nivell 2
 - Exercici 1
