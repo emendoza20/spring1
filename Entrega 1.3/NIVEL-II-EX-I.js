@@ -20,7 +20,7 @@ let salaries = [{
     salary: 2000
 }];
 
-getEmployee = (id) => {
+/*getEmployee = (id) => {
     let promesa = new Promise((resolve, reject) => {
        if(employees.find(x => x.id === id)){
             console.log(`El empleado es ${employees[id-1].name}`)
@@ -32,7 +32,18 @@ getEmployee = (id) => {
         
     });
     return promesa;
-}
+}*/
 
+getEmployee = (id) => {
+    let promesa = new Promise((resolve, reject) => {
+        employees.forEach(element => {
+            if(element.id == id){
+                resolve(element)
+            }   
+        });   
+        reject(`Empleado no encontrado`);
+    });
+    return promesa;
+}
 console.log(getEmployee(3));
 
