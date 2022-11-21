@@ -115,25 +115,18 @@ console.log("Fin");*/
 //NIVEL 2 EJERCICIO 1
  //Crea una funció que retorni el doble del número que li passa com a paràmetre després de 2 segons.
 
+
+ let doble = (a) => a * 2;
+ setTimeout(function () {
+     return doble(10)
+ },2000);
+
+ console.log(doble(1.6))
+
 //Crea una altra funció que rebi tres números i calculi la suma dels seus dobles fent servir la funció anterior.
 //1)Crea una funció que retorni el doble del número que li passa com a paràmetre després de 2 segons.
-let doble = (a) => a * 2;
-    setTimeout(function () {
-        return doble(10)
-    },2000);
 
-async function sumaTresValores(a,b,c) {
-    try {
-     console.log('calling');
-      let suma = await doble(a) + doble(b) + doble(c);
-      console.log(suma);
-    } catch (error) {
-      console.log("Error: " + error);
-    }
-  }
- 
-  //Async();
-console.log(doble(1.6))
+
 
 /************************************************************************************************/
 //Crea una funció que retorni el doble del número que li passa com a paràmetre després de 2 segons.
@@ -157,11 +150,6 @@ console.log(doble(1.6))
   asyncCall();*/
  
   
-  let doble = (a) => a * 2;
-  setTimeout(function () {
-      return doble(10)
-  },2000);
-
 async function sumaTresValores(a,b,c) {
   try {
    console.log('calling');
@@ -173,7 +161,6 @@ async function sumaTresValores(a,b,c) {
 }
 
 //Async();
-console.log(doble(1.6))
 
 
 //captura de errores (no se pueden pasar letras como parametros)

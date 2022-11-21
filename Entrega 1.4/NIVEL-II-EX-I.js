@@ -32,7 +32,7 @@ let doble = async(a) => {
     })
 }
 
-async function sumaTresValores(a,b,c) {
+/*async function sumaTresValores(a,b,c) {
     try {
      console.log('calling');
       let suma = await doble(a) + doble(b) + doble(c);
@@ -40,10 +40,10 @@ async function sumaTresValores(a,b,c) {
     } catch (error) {
       console.log("Error: " + error);
     }
-  }
+  }*/
  
   //Async();
-console.log(doble(6))
+console.log(doble(3))
 
 
 //captura de errores (no se pueden pasar letras como parametros)
