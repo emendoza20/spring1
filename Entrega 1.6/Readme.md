@@ -1,12 +1,10 @@
 
-:snowflake:
+:snowflake: :snowflake: :snowflake: :snowflake: :snowflake:  :snowflake: :snowflake: :snowflake: :snowflake: :snowflake: :snowflake: :snowflake: :snowflake: :snowflake: :snowflake:
 # Testing exercises using Jest 	:smiley_cat: :
 :feet:
 **npm install --save-dev jest and to run tests npm run test**
 
 The test files can be found in the **_tests_** folder
-
-The file generalTestSuit-N1.test.js contains all the tests for:
 
 ## Nivell 1 :star:
 - Crea un arxiu amb les funcions sumar, restar, multiplicar i dividir dos o més operands. Testeja la correcta execució d'aquestes funcions.
