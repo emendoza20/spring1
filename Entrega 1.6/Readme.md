@@ -1,8 +1,10 @@
-# Testing exercises using Jest :
+
+:snowflake:
+# Testing exercises using Jest 	:smiley_cat: :
 :feet:
 **npm install --save-dev jest and to run tests npm run test**
 
-The test files can be found in the _tests_ folder
+The test files can be found in the **_tests_** folder
 
 The file generalTestSuit-N1.test.js contains all the tests for:
 
