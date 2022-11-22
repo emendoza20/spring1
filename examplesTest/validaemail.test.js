@@ -6,6 +6,6 @@ test('email emendoza867@gmail.com -> true',() =>{
 });
 
 test('email 1 -> false',() =>{
-    expect(ValidaEmail.isValidEmail('1')).toBe(true)
+    expect(ValidaEmail.isValidEmail('1')).toBe(false)
 
 });
