@@ -1,0 +1,16 @@
+{
+  "name": "ProbandoSuma",
+  "version": "1.0.0",
+  "description": "",
+  "main": "suma.js",
+  "dependencies": {
+    "jest": "^29.3.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
