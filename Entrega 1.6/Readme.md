@@ -9,6 +9,8 @@ npm init -y => crear el package.jason
 npm test => correr el programa   
 
 
+
+
 :feet:
 **npm install --save-dev jest and to run tests npm run test**
 
