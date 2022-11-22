@@ -2,11 +2,12 @@
 :snowflake: :snowflake: :snowflake: :snowflake: :snowflake:  :snowflake: :snowflake: :snowflake: :snowflake: :snowflake: :snowflake: :snowflake: :snowflake: :snowflake: :snowflake:
 # Testing exercises using Jest 	:smiley_cat: :
 :heavy_check_mark:
- npm install --save jest => crear el proyecto  
+npm install --save jest => crear el proyecto  
 :heavy_check_mark:
- npm init -y => crear el package.jason 
+npm init -y => crear el package.jason 
 :heavy_check_mark:
 npm test => correr el programa   
+
 
 :feet:
 **npm install --save-dev jest and to run tests npm run test**
