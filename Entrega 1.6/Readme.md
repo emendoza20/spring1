@@ -2,6 +2,7 @@
 :snowflake: :snowflake: :snowflake: :snowflake: :snowflake:  :snowflake: :snowflake: :snowflake: :snowflake: :snowflake: :snowflake: :snowflake: :snowflake: :snowflake: :snowflake:
 # Testing exercises using Jest 	:smiley_cat: :
 :heavy_check_mark:
+npm install jest => installar jest
 npm install --save jest => crear el proyecto  
 :heavy_check_mark:
 npm init -y => crear el package.jason 

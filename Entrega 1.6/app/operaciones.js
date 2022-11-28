@@ -1,17 +1,16 @@
-function sumar(a, b) {
+function sum(a, b) {
     return a + b;
   }
 
-function restar(a,b) {
+function resta(a,b) {
     return a - b
 }  
 
-function multiplicar(a, b) {
+function multi(a, b) {
     return a * b
 }
 
-function dividir(a, b) {
+function divi(a, b) {
     return a / b
 }
-
-module.exports = {sumar, restar, multiplicar, dividir};
+  module.exports = {sum, resta,multi, divi};
